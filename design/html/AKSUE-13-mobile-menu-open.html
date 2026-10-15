@@ -1,0 +1,94 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Mobile menu</title><style>
+@font-face{font-family:Fraunces;font-weight:400;src:url(https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.1.0/files/fraunces-latin-400-normal.woff2)}
+@font-face{font-family:Fraunces;font-weight:400;font-style:italic;src:url(https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.1.0/files/fraunces-latin-400-italic.woff2)}
+@font-face{font-family:Fraunces;font-weight:600;src:url(https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.1.0/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:Fraunces;font-weight:600;font-style:italic;src:url(https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.1.0/files/fraunces-latin-600-italic.woff2)}
+@font-face{font-family:'DM Sans';font-weight:400;src:url(https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.1.0/files/dm-sans-latin-400-normal.woff2)}
+@font-face{font-family:'DM Sans';font-weight:500;src:url(https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.1.0/files/dm-sans-latin-500-normal.woff2)}
+@font-face{font-family:'DM Sans';font-weight:600;src:url(https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.1.0/files/dm-sans-latin-600-normal.woff2)}
+@font-face{font-family:'DM Sans';font-weight:700;src:url(https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.1.0/files/dm-sans-latin-700-normal.woff2)}
+:root{--green:#0B4D3B;--gd:#062E23;--gs:#E6F0EC;--or:#F37021;--os:#FDEBDD;--ot:#C04F0E;--ink:#13231D;--muted:#5B6B64;--line:#DCE3DF;--cream:#F8F5EE;--w:#fff;--px:80px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff;width:1440px;-webkit-font-smoothing:antialiased}
+body.m{width:390px;--px:20px}
+.serif{font-family:Fraunces,serif;font-weight:600;letter-spacing:-.01em}
+.ic{flex:none;display:block}
+a{color:inherit;text-decoration:none}
+.row{display:flex;align-items:center} .col{display:flex;flex-direction:column}
+.px{padding-left:var(--px);padding-right:var(--px)}
+.eb{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ot)}
+.eb:before{content:'';width:28px;height:2px;background:currentColor}
+.dark .eb{color:var(--or)}
+.h2{font-family:Fraunces;font-weight:600;font-size:44px;line-height:1.12;letter-spacing:-.015em;margin-top:14px}
+.lead{font-size:17px;line-height:1.6;color:var(--muted);margin-top:14px;max-width:640px}
+.dark .lead{color:#BFD3CA} .dark .h2{color:#fff}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap;border:1.5px solid transparent}
+.btn.or{background:var(--or);color:#fff} .btn.gr{background:var(--green);color:#fff}
+.btn.ol{border-color:#fff;color:#fff} .btn.od{border-color:var(--green);color:var(--green)}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:var(--os);color:#A8420B;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;background:var(--gs);color:var(--green);font-size:12px;font-weight:700}
+.chip.o{background:var(--os);color:#A8420B}
+.ph{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--green);
+  background:linear-gradient(135deg,#D3E3DB 0%,#A9C6B8 55%,#8DB3A2 100%)}
+.ph:after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:18px 18px;opacity:.5}
+.ph span{font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;text-align:center;padding:0 16px;max-width:90%;position:relative;z-index:1;line-height:1.5}
+.ph .ic{position:relative;z-index:1;opacity:.85}
+.ib{width:50px;height:50px;border-radius:14px;background:var(--gs);color:var(--green);display:flex;align-items:center;justify-content:center;flex:none}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px}
+.lk{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--green)}
+/* header */
+.util{background:var(--gd);color:#D7E4DE;font-size:13px;height:42px;display:flex;justify-content:space-between;align-items:center}
+.util .row{gap:26px} .util .row .row{gap:8px} .util .ic{color:#BFD3CA}
+.util .sep{width:1px;height:14px;background:#2B5A4C}
+.mainnav{height:88px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);background:#fff;position:relative;z-index:5}
+.logo{display:flex;align-items:center;gap:12px}
+.crest{width:56px;height:56px;border-radius:50%;border:2px dashed var(--or);background:var(--os);display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--green);flex:none}
+.logo small{display:block;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.logo b{display:block;font-family:Fraunces;font-weight:600;font-size:19px;color:var(--green);line-height:1.15;white-space:nowrap}
+.logo.light small{color:#A9C3B8} .logo.light b{color:#fff}
+.navl{display:flex;gap:6px;align-items:center}
+.navl a{display:flex;align-items:center;gap:4px;font-size:15px;font-weight:500;padding:9px 12px;border-radius:999px;white-space:nowrap}
+.navl a .ic{color:var(--muted)}
+.navl a.on{color:var(--green);font-weight:700;box-shadow:inset 0 -3px 0 var(--or);border-radius:0}
+.navl a.open{background:var(--gs);color:var(--green);font-weight:700}
+.navl a.open .ic{color:var(--green);transform:rotate(180deg)}
+.nava{display:flex;gap:12px;align-items:center}
+.sbtn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+/* footer */
+footer{background:var(--gd);color:#D7E4DE;padding-top:72px;padding-bottom:32px}
+.fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.25fr;gap:48px}
+.fcols h6{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
+.fcols li{list-style:none;font-size:15px;margin-bottom:13px;color:#C9DAD2}
+.fcols .row{gap:10px;margin-bottom:13px;font-size:15px} .fcols .row .ic{color:var(--or)}
+.soc{display:flex;gap:10px;margin-top:24px} .soc div{width:38px;height:38px;border-radius:50%;border:1px solid #2B5A4C;display:flex;align-items:center;justify-content:center;color:#BFD3CA}
+.fbar{display:flex;justify-content:space-between;border-top:1px solid #1E4A3D;margin-top:56px;padding-top:24px;font-size:13px;color:#8FB0A3}
+/* page hero */
+.phero{background:var(--gd);color:#fff;padding-top:72px;padding-bottom:72px;position:relative;overflow:hidden}
+.phero:before{content:'';position:absolute;right:-120px;top:-160px;width:520px;height:520px;border-radius:50%;border:1.5px solid rgba(243,112,33,.22)}
+.crumb{display:flex;align-items:center;gap:8px;font-size:14px;color:#A9C3B8} .crumb b{color:var(--or);font-weight:600}
+.phero h1{font-family:Fraunces;font-weight:600;font-size:60px;line-height:1.08;margin-top:20px;letter-spacing:-.02em}
+.phero p{font-size:18px;line-height:1.6;color:#BFD3CA;margin-top:20px;max-width:640px}
+.sec{padding-top:100px;padding-bottom:100px}
+.cream{background:var(--cream)} .dark{background:var(--gd);color:#fff}
+.tabs{display:flex;gap:36px;border-bottom:1px solid var(--line);background:#fff}
+.tabs div{padding:20px 0;font-size:15px;font-weight:500;color:var(--muted)}
+.tabs div.on{color:var(--green);font-weight:700;box-shadow:inset 0 -3px 0 var(--or)}
+/* dropdown */
+.dd{position:absolute;left:80px;top:130px;width:1280px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--or);border-radius:0 0 20px 20px;box-shadow:0 24px 48px rgba(6,46,35,.22);padding:32px;display:flex;gap:24px;z-index:10}
+.ddc{flex:1;display:flex;flex-direction:column;gap:2px}
+.ddc h6{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ot);padding:0 12px 10px}
+.mi{padding:10px 12px;border-radius:12px;display:flex;align-items:center;gap:10px}
+.mi b{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px} .mi small{display:block;font-size:13px;color:var(--muted);margin-top:3px;line-height:1.4}
+.mi.h{background:var(--gs)} .mi.h b{color:var(--green);font-weight:700}
+.fcard{width:320px;flex:none;border-radius:16px;padding:24px;background:var(--cream);display:flex;flex-direction:column;gap:14px}
+.fcard.d{background:var(--gd);color:#fff}
+.fcard .k{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or)}
+.fcard h4{font-family:Fraunces;font-weight:600;font-size:22px;line-height:1.25}
+.fcard p{font-size:14px;line-height:1.5;color:var(--muted)} .fcard.d p{color:#BFD3CA}
+.scrim{position:absolute;left:0;right:0;top:130px;bottom:0;background:rgba(6,46,35,.5);z-index:4}
+.statetag{position:absolute;left:40px;bottom:28px;z-index:20;background:var(--or);color:#fff;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+</style></head>
+<body class="m"><div style="min-height:844px"><div class="row" style="justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--line);background:#fff">
+<div class="logo"><div class="crest" style="width:44px;height:44px;font-size:9px">LOGO</div><div><small style="font-size:11px">Akwa Ibom State</small><b style="font-size:15.5px">University of Education</b></div></div>
+<div class="row" style="gap:8px"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><div style="width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff"><svg class="ic " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div></div></div><div style="padding:12px 20px 0"><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;">Home</span><span style="color:var(--muted)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;">About Us</span><span style="color:var(--muted)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;color:var(--green)">Academics</span><span style="color:var(--green)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></div><div style="background:var(--cream);border-radius:12px;padding:16px;margin:10px 0;display:flex;flex-direction:column;gap:14px;font-size:15px;font-weight:500;color:var(--muted)"><span>Faculties & Departments</span><span>Undergraduate Programmes</span><span>Postgraduate School</span><span>Academic Calendar</span><span>e-Library</span></div><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;">Admissions</span><span style="color:var(--muted)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;">Student Life</span><span style="color:var(--muted)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;">News & Events</span><span style="color:var(--muted)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div><div class="row" style="justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)"><span class="serif" style="font-size:20px;">Contact</span><span style="color:var(--muted)"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></div></div><div class="col" style="gap:12px;padding:24px 20px"><span class="btn or" style="justify-content:center">Portals<svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span><span class="btn od" style="justify-content:center">Apply for Admission<svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div><div class="row" style="gap:20px;padding:8px 20px 32px;font-size:14px;color:var(--muted)"><span class="row" style="gap:8px"><svg class="ic " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+234 800 000 0000</span></div></div></body></html>

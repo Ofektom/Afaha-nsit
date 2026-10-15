@@ -1,0 +1,173 @@
+{
+  "/images/about-main-gate.jpg": {
+    "publicId": "aksue/images/about-main-gate",
+    "version": 1791996954,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "b45adaa6e5431b2a15b0596185e94b9ce6c8a33c"
+  },
+  "/images/campus-classroom.jpg": {
+    "publicId": "aksue/images/campus-classroom",
+    "version": 1792003490,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "877ebbc6403c452b974e759040a3dcfc84da1fbf"
+  },
+  "/images/campus-facility-visit.jpg": {
+    "publicId": "aksue/images/campus-facility-visit",
+    "version": 1792003493,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1080,
+    "height": 608,
+    "hash": "6603df0956fcafb8fed9307efb189bb1e06856bb"
+  },
+  "/images/campus-ict-centre.jpg": {
+    "publicId": "aksue/images/campus-ict-centre",
+    "version": 1792003496,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1600,
+    "height": 1066,
+    "hash": "f54c766d6ecd3fdc620588f16ac5a1364ba0c7df"
+  },
+  "/images/campus-lecture-room.jpg": {
+    "publicId": "aksue/images/campus-lecture-room",
+    "version": 1792003497,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "5eca4d31db6ea087dd4c3f2c76c4a1d4bb2adbe7"
+  },
+  "/images/campus-tour.jpg": {
+    "publicId": "aksue/images/campus-tour",
+    "version": 1792003498,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1080,
+    "height": 608,
+    "hash": "70ed12ee6473088c86d3fe2ac400846dc45de50c"
+  },
+  "/images/faculty-arts-social-science-education.jpg": {
+    "publicId": "aksue/images/faculty-arts-social-science-education",
+    "version": 1792003499,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1080,
+    "height": 608,
+    "hash": "6603df0956fcafb8fed9307efb189bb1e06856bb"
+  },
+  "/images/faculty-early-childhood-special-education.jpg": {
+    "publicId": "aksue/images/faculty-early-childhood-special-education",
+    "version": 1792003500,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1080,
+    "height": 608,
+    "hash": "70ed12ee6473088c86d3fe2ac400846dc45de50c"
+  },
+  "/images/faculty-education.jpg": {
+    "publicId": "aksue/images/faculty-education",
+    "version": 1792003501,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "877ebbc6403c452b974e759040a3dcfc84da1fbf"
+  },
+  "/images/faculty-postgraduate.jpg": {
+    "publicId": "aksue/images/faculty-postgraduate",
+    "version": 1792003503,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "5eca4d31db6ea087dd4c3f2c76c4a1d4bb2adbe7"
+  },
+  "/images/faculty-science-education.jpg": {
+    "publicId": "aksue/images/faculty-science-education",
+    "version": 1792003504,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "fed3a83cd46221d076270f2247888e3687494c1b"
+  },
+  "/images/faculty-vocational-technical-education.jpg": {
+    "publicId": "aksue/images/faculty-vocational-technical-education",
+    "version": 1792003507,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1600,
+    "height": 1066,
+    "hash": "f54c766d6ecd3fdc620588f16ac5a1364ba0c7df"
+  },
+  "/images/hero.jpg": {
+    "publicId": "aksue/images/hero",
+    "version": 1791984954,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "2c6ffc393bd4247852d3da38ae50a1e47da92d73"
+  },
+  "/images/news/digital-transformation-portal-ecosystem.jpg": {
+    "publicId": "aksue/images/news/digital-transformation-portal-ecosystem",
+    "version": 1792003509,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1600,
+    "height": 1066,
+    "hash": "f54c766d6ecd3fdc620588f16ac5a1364ba0c7df"
+  },
+  "/images/news/matriculation-ceremony-new-students.jpg": {
+    "publicId": "aksue/images/news/matriculation-ceremony-new-students",
+    "version": 1792003510,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1080,
+    "height": 608,
+    "hash": "70ed12ee6473088c86d3fe2ac400846dc45de50c"
+  },
+  "/images/news/teaching-practice-orientation-300-level.jpg": {
+    "publicId": "aksue/images/news/teaching-practice-orientation-300-level",
+    "version": 1792003511,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 960,
+    "height": 540,
+    "hash": "fed3a83cd46221d076270f2247888e3687494c1b"
+  },
+  "/images/vc-speaking.jpg": {
+    "publicId": "aksue/images/vc-speaking",
+    "version": 1791994583,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1280,
+    "height": 890,
+    "hash": "245ddbf65aecb53c8b9c9aa5082bbb164c4def46"
+  },
+  "/images/vc.jpg": {
+    "publicId": "aksue/images/vc",
+    "version": 1791986937,
+    "format": "jpg",
+    "resourceType": "image",
+    "width": 1280,
+    "height": 854,
+    "hash": "97a100c6693c433236f264fb75869bc942d70cc6"
+  },
+  "/logo.svg": {
+    "publicId": "aksue/logo",
+    "version": 1791996955,
+    "format": "svg",
+    "resourceType": "image",
+    "width": 200,
+    "height": 200,
+    "hash": "6fa8488a770cd52d32e7eff0550ec0b7b1edb045"
+  }
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Anchor targets clear the sticky header. */
+  [id] {
+    scroll-margin-top: 104px;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.orange.ring');
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* 1280px content + 80px gutters at 1440; 40px on tablet/small laptop; 20px on mobile. */
+  .container-x {
+    @apply mx-auto w-full max-w-container px-5 md:px-10 2xl:px-20;
+  }
+
+  .section-y {
+    @apply py-10 lg:py-[100px];
+  }
+}

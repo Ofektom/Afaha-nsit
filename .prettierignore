@@ -1,0 +1,9 @@
+.next
+out
+node_modules
+design
+package-lock.json
+src/generated
+CLAUDE_CODE_PROMPT.md
+design 2
+PROMPT_ADDENDUM_v2.md
